@@ -3,11 +3,7 @@
 # SIGTERM-handler this funciton will be executed when the container receives the SIGTERM signal (when stopping)
 term_handler(){
 	echo "Stopping..."
-	#ifdown wlan0
-	#ip link set wlan0 down
-	#ip addr flush dev wlan0
-    #ip link set ap-bridge down
-    #ip link delete ap-bridge
+    create_ap --stop wlan0
 	exit 0
 }
 
@@ -58,12 +54,8 @@ make install
 
 echo "Creating Access Point daemon..."
 
-create_ap wlan0 eth0 testAP kad1e1kad1e1 --no-virt --no-haveged --daemon --hostapd-debug 2 -m bridge --logfile log.txt
+create_ap wlan0 eth0 SSID WPA_PASSPHRASE --no-virt --no-haveged --daemon --hostapd-debug CHANNEL -m bridge --logfile log.txt
 
 echo "Removing eth0 from networkManager ..."
 
 nmcli dev set eth0 managed no
-
-
-
-

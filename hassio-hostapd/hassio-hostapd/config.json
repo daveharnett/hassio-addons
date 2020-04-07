@@ -30,7 +30,7 @@
   "options": {
     "ssid": "",
     "wpa_passphrase": "",
-    "channel": "6",
+    "channel": "3",
     "address": "10.0.0.100",
     "netmask": "255.255.0.0",
     "broadcast": "10.0.255.255"
