@@ -27,4 +27,3 @@ The available configuration options are as follows (this is filled in with some 
     "broadcast": "192.168.99.254"
 }
 ```
-**Note**: _This is just an example, don't copy and paste it! Create your own!_

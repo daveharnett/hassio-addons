@@ -1,8 +1,8 @@
 {
   "name": "Hassio AP",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "slug": "hassio-ap",
-  "description": "Access Point in hass.io",
+  "description": "Access Point in hass.io. it's gonna be awesome.",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
   "url": "https://github.com/davidramosweb/hassio-addons/tree/master/hassio-hostapd",
   "startup": "system",
@@ -25,7 +25,8 @@
     "config:rw",
     "ssl:rw",
     "addons:rw",
-    "share:rw"
+    "share:rw",
+    "backup:rw"
   ],
   "options": {
     "ssid": "",

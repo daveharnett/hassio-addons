@@ -1,0 +1,44 @@
+{
+    "name": "Hello world",
+    "version": "1.0.3",
+    "slug": "hello_world",
+    "description": "My first real add-on!",
+    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "startup": "application",
+    "boot": "auto",
+    "apparmor": false,
+    "host_network": true,
+    "full_access": true,
+    "host_dbus": true,
+    "privileged": [
+        "NET_ADMIN",
+        "SYS_ADMIN",
+        "SYS_RAWIO",
+        "SYS_TIME",
+        "SYS_NICE"
+      ],
+    "devices": [
+        "/dev/mem:/dev/mem:rwm"
+    ],
+    "map": [
+      "config:rw",
+      "ssl:rw",
+      "addons:rw",
+      "share:rw",
+      "backup:rw"
+    ],
+    "options": {
+        "uplink_interface": "eth0",
+        "ap_interface": "wlan0",
+        "ssid": "hassAP",
+        "wpa_passphrase": "password!",
+        "channel": "3"
+    },
+    "schema": {
+        "uplink_interface": "str",
+        "ap_interface": "str",
+        "ssid": "str",
+        "wpa_passphrase": "str",
+        "channel": "int" 
+    }
+}

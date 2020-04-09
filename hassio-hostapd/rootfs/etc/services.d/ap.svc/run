@@ -1,0 +1,10 @@
+#!/usr/bin/execlineb -P
+# ==============================================================================
+# Home Assistant Community Add-on: Example
+# Runs example1 script
+# ==============================================================================
+
+
+#bashio::log.info "Starting Main..."
+
+exec /usr/bin/ap.sh

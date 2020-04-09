@@ -1,0 +1,3 @@
+/etc/services.d/ap.svc/run false root 0777 0777
+/etc/services.d/ap.svc/finish false root 0777 0777
+/usr/bin/ap.sh false false root 0777 0777

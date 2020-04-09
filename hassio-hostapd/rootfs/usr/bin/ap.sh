@@ -7,6 +7,7 @@ term_handler(){
 	exit 0
 }
 
+
 # Setup signal handlers
 trap 'term_handler' SIGTERM
 
@@ -51,11 +52,12 @@ git clone https://github.com/oblique/create_ap
 cd create_ap
 make install
 
-
-echo "Creating Access Point daemon..."
-
-create_ap wlan0 eth0 SSID WPA_PASSPHRASE --no-virt --no-haveged --daemon --hostapd-debug CHANNEL -m bridge --logfile log.txt
-
 echo "Removing eth0 from networkManager ..."
 
 nmcli dev set eth0 managed no
+
+
+echo "Creating Access Point daemon..."
+
+create_ap wlan0 eth0 SSID WPA_PASSPHRASE --no-virt --no-haveged --hostapd-debug CHANNEL -m bridge # --daemon --logfile log.txt
+
